@@ -1,0 +1,93 @@
+/* Contêiner para centralizar o card */
+.clima-container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  min-height: 100vh;
+  min-width: 190vh; /* Garante que ocupe toda a altura da tela */
+  background-color: #ecf0f1; /* Cor de fundo do contêiner */
+}
+
+/* Estilo do card */
+.clima {
+  font-family: 'Arial', sans-serif;
+  background-color: #edc9f3; /* Cor de fundo suave */
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 600px;
+  color: #333;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.clima::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(90deg, #8e44ad, #3498db);
+}
+
+/* Título principal */
+.clima h1 {
+  font-size: 3rem;
+  color: #000000; /* Cor para o título */
+}
+
+/* Tamanho da temperatura */
+.clima h2 {
+  margin-top: -10px;
+  font-size: 2rem;
+  color: #000000; /* Cor da temperatura */
+  margin-bottom: 30px;
+}
+
+/* Descrição do clima */
+.clima .weather-description {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* Informações adicionais de clima */
+.clima .clima-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.clima .clima-info p {
+  margin: 10px;
+  width: 150px;
+}
+
+.clima .clima-info p span {
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .clima {
+    padding: 20px;
+    margin: 20px; /* Menor margem para telas pequenas */
+  }
+
+  .clima h1 {
+    font-size: 1.5rem;
+  }
+
+  .clima h2 {
+    font-size: 2rem;
+  }
+
+  .clima .clima-info {
+    flex-direction: column;
+    align-items: center;
+  }
+}

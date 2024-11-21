@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+  height: 100vh;
+  background-color: #f4f4f4; /* Cor de fundo */
+}
+
+.app-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container-water,
+.image-container-animals {
+  position: absolute;  /* Permite posicionamento absoluto das imagens de fundo */
+  top: 0;              /* Alinha as imagens ao topo */
+  left: 0;             /* Faz com que as imagens de fundo ocupem toda a largura da tela */
+  height: 100%;        /* Garante que as imagens ocupem toda a altura da tela */
+  width: 100vw;        /* Garante que as imagens ocupem toda a largura da tela */
+  display: flex;
+  justify-content: flex-end; /* Alinha as imagens à direita dentro do contêiner */
+  align-items: center;
+}
+
+.image-container-water img,
+.image-container-animals img {
+  height: 100%;         /* Garante que as imagens ocupem toda a altura */
+  width: auto;          /* Mantém a proporção das imagens */
+}
+
+.image-container-crab {
+  position: fixed;  /* Posiciona a imagem do caranguejo de forma fixa */
+  top: 220px;        /* Ajuste a posição vertical conforme necessário */
+  left: 0;           /* Posiciona a imagem do caranguejo à esquerda */
+  z-index: 2;        /* Garante que o caranguejo fique sobre as imagens de fundo */
+}
+
+.image-container-crab img {
+  height: 13rem;     /* Ajusta o tamanho da imagem do caranguejo */
+  width: auto;
+}
+
+.text-card {
+  position: fixed; /* Fixa o card na tela */
+  top: 300px; /* Alinha o card com a imagem do caranguejo */
+  left: 12.5rem; /* Espaçamento à direita da imagem do caranguejo */
+  z-index: 3;
+}
+
+.card-icon {
+  width: 500px; /* Ajuste o tamanho do ícone SVG conforme necessário */
+  height: auto;
+}
+
+/* Estilo para o botão (CTA) */
+.cta-button {
+  position: fixed;
+  top: 600px; /* Ajuste a posição do botão conforme necessário */
+  left: 12.5rem; /* Alinha com o card */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  gap: 10px;
+  width: 202px;
+  height: 69px;
+  background: radial-gradient(255.8% 457.4% at 88.45% 24.64%, #C27FCF 0%, #0368FF 100%);
+  border-radius: 18px;
+  z-index: 4;
+}
+
+.cta-button button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Efeito de hover para o botão */
+.cta-button:hover {
+  background: radial-gradient(255.8% 457.4% at 88.45% 24.64%, #ff88cc 0%, #2f2b6d 100%); /* Inverte as cores do gradiente */
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+/* Botão "Watch Video" */
+.watch-video-button {
+  position: fixed;
+  top: 623px; /* Ajuste a posição vertical do botão */
+  left: 25rem; /* Coloque o botão um pouco à direita do outro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4rem;
+  width: 237px;
+  height: 32px;
+  background: linear-gradient(180deg, #1B18F9 0%, #1B18F9 46.35%, #E146AD 100%);
+  border: none;
+  border-radius: 16px;
+  z-index: 4;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  line-height: 31px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Faz com que o texto seja preenchido com o gradiente */
+  background-clip: text;
+  transition: color 0.3s ease; /* Transição suave para a cor do texto */
+}
+
+.ods-14 {
+  position: fixed;
+  top: 860px;  /* Ajusta a posição vertical para alinhar com o caranguejo */
+  left: 0;  /* Coloca o texto à esquerda da tela, alinhado com o caranguejo */
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;  /* Alinha o texto à esquerda */
+  background: linear-gradient(100deg, #1B18F9 0%, #480dec 46.35%, #E146AD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-left: 20px; /* Ajuste para dar um pequeno espaço do lado esquerdo */
+}
+
+
+
+
+
+
+

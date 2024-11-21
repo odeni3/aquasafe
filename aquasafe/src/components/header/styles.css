@@ -1,0 +1,78 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Aplica a fonte Poppins */
+  }
+  
+  /* Header principal */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    background-color: #f4f4f400; /* Cor de fundo semelhante à imagem */
+    position: absolute; /* Posiciona o header sobre as imagens */
+    top: 2px; /* Garante que o header fique no topo */
+    left: 0; /* Garante que o header comece da parte esquerda */
+    z-index: 10; /* Garante que o header fique sobreposto */
+    height: 70px; /* Defina uma altura fixa em pixels */
+  }
+  
+  /* Logo à esquerda */
+  .logo-container .logo {
+    height: 45px; /* Ajuste o tamanho do logo conforme necessário */
+    margin-right: 200px;
+  }
+  
+  /* Navegação à direita */
+  .nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 85px;
+  }
+  
+  .nav-links ul li {
+    font-size: 20px;
+    position: relative; /* Necessário para o dropdown */
+  }
+  
+  .nav-links ul li a {
+    color: #240541; /* Cor dos links */
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-links ul li a:hover {
+    color: #ff88cc; /* Cor do link ao passar o mouse */
+  }
+  
+  /* Estilos para o dropdown */
+  .dropdown {
+    position: relative; /* Permite que o conteúdo suspenso seja posicionado em relação ao item de lista */
+  }
+  
+  .dropdown-content {
+    display: none; /* Esconde o menu suspenso por padrão */
+    position: absolute;
+    background-color: #f4f4f4; /* Cor de fundo do menu */
+    min-width: 160px;  /* Largura mínima do menu suspenso */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);  /* Sombra */
+    z-index: 1;
+    border-radius: 5px;
+  }
+  
+  .dropdown-content a {
+    color: #0b0114;  /* Cor dos links dentro do dropdown */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ffc1e4;  /* Cor do link ao passar o mouse */
+    color: #fff;  /* Altera a cor do texto quando o link é destacado */
+  }
+  
+  /* Exibe o menu suspenso quando o mouse passa sobre o item de "Serviços" */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  

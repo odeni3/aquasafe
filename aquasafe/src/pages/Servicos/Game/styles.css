@@ -1,0 +1,12 @@
+#flappy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura da tela */
+    background-color: #87ceeb; /* Céu azul */
+}
+
+#gameCanvas {
+    border: 2px solid #333;
+    background-color: #70c5ce;
+}
