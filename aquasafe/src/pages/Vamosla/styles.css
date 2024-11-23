@@ -1,22 +1,21 @@
-/* Container principal */
 .vamosla-container {
-    background-color: #f0f8ff; /* Cor suave para o fundo */
+    background-color: #f0f8ff; /* Fundo suave */
     color: #003366;
     padding: 40px 20px;
     text-align: center;
     border-radius: 15px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
-    width: 99.2vw; /* Usa a largura total da janela */
-    height: 85vw; /* Usa a altura total da janela */
+    width: 100vw; /* Usa toda a largura da janela */
+    min-height: 100vh; /* Garante que ocupe toda a altura */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
-    margin: 0;
-    box-sizing: border-box; /* Certifica-se de que o padding não quebre o layout */
-    position: absolute; /* Faz com que o container ocupe toda a tela, sem espaços */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    box-sizing: border-box;
+    position: absolute;
     top: 0;
     left: 0;
+    overflow-y: auto; /* Permite rolar em telas menores */
 }
 
 /* Título */
@@ -37,15 +36,13 @@
 /* Container de tarefas */
 .tasks-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adapta o número de colunas */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adapta dinamicamente o número de colunas */
     gap: 20px;
-    width: 50%;
+    width: 80%; /* Aumenta a largura para preencher mais espaço */
     justify-items: center;
-    padding: 0 20px;
     margin-top: 20px;
 }
 
-/* Cartões de tarefas */
 /* Cartões de tarefas */
 .task {
     background-color: #ffffff;
@@ -54,17 +51,18 @@
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%; /* Assegura que os cards ocupem a largura da grid */
-    max-width: 300px; /* Limita a largura máxima dos cards */
-    box-sizing: border-box; /* Garante que o padding não ultrapasse o limite */
-    position: relative; /* Permite que o botão seja posicionado no final */
-    padding-bottom: 60px; /* Garante que o botão tenha espaço suficiente para não sobrepor o conteúdo */
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+    position: relative;
+    padding-bottom: 60px;
 }
 
 /* Cartão concluído */
 .task.completed {
     background-color: #f1b1e9; /* Cor de fundo para concluído */
-    box-shadow: 0px 4px 12px rgba(175, 11, 140, 0.2); /* Alterando a sombra para dar um efeito */
+    box-shadow: 0px 4px 12px rgba(175, 11, 140, 0.2); /* Sombra personalizada */
+    border-left: 5px solid #ff66b2; /* Adiciona destaque visual */
 }
 
 /* Efeito ao passar o mouse */
@@ -75,7 +73,7 @@
 
 /* Título da tarefa */
 .task h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 10px;
     color: #ff66b2;
 }
@@ -84,6 +82,7 @@
 .task p {
     font-size: 1rem;
     color: #555;
+    line-height: 1.5;
 }
 
 /* Botão de tarefa */
@@ -99,8 +98,8 @@
     display: block;
     width: 85%;
     text-align: center;
-    position: absolute; /* Fixa o botão no fundo do card */
-    bottom: 20px; /* Posiciona o botão a 20px do fundo */
+    position: absolute;
+    bottom: 20px;
 }
 
 /* Efeito de hover no botão */
@@ -108,17 +107,140 @@
     background-color: #ff3385;
 }
 
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.close-modal {
+    background: #d9534f;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.close-modal:hover {
+    background: #c9302c;
+}
+
+/* Animação do modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
     .vamosla-container {
-        padding: 30px 15px;
+        padding: 20px 15px;
     }
 
     .tasks-container {
-        grid-template-columns: 1fr; /* Exibe uma coluna em telas pequenas */
+        grid-template-columns: 1fr; /* Exibe uma coluna */
+        width: 100%;
     }
 
     .task {
-        max-width: 100%; /* Garante que os cards ocupem toda a largura disponível em telas pequenas */
+        max-width: 100%;
     }
+}
+
+@media (max-width: 480px) {
+    .vamosla-container h1 {
+        font-size: 2rem;
+    }
+
+    .vamosla-container p {
+        font-size: 1rem;
+    }
+
+    .task h3 {
+        font-size: 1.2rem;
+    }
+
+    .task p {
+        font-size: 0.9rem;
+    }
+
+    .task button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animação de saída */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}
+
+/* Modal content - entrada e saída */
+.modal-content {
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content.modal-exit {
+    animation: fadeOut 0.3s ease;
+}
+
+.imageSVG{
+    animation:  fadeIn 0.7s ease;
+    margin-right: 5px;
+    
+}
+.botao_confirma{
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #ff66b2;
+    animation: fadeIn 0.3s ease;
+    color: white;
+    border-color: #ff66b2;
 }
