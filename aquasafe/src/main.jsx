@@ -7,7 +7,7 @@ import Vamosla from './pages/Vamosla/Vamosla.jsx'; // Importando a página "Vamo
 import TabuaDeMare from './pages/Servicos/Previsao/Clima.jsx';
 import Flappy from './pages/Servicos/Game/flappy.jsx';
 import Estatisticas from './pages/Servicos/Estatisticas/Estatisticas.jsx';
-
+import Equipe from './pages/Sobre/Equipe/equipe.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -18,6 +18,9 @@ createRoot(document.getElementById('root')).render(
         <Route path="/tabua" element={<TabuaDeMare />} />
         <Route path="/flappy" element={<Flappy />} />
         <Route path="/estatisticas" element={<Estatisticas />} />
+        <Route path="/equipe" element={<Equipe />} />
+        
+
       </Routes>
     </Router>
   </StrictMode>

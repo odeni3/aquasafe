@@ -1,0 +1,53 @@
+.equipe-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  font-size: 3em; /* Deixa o título "Equipe" maior */
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #555;
+  font-size: 2.5em; /* Deixa "Alunos" e "Professores" grandes, mas menores que "Equipe" */
+  margin-top: 30px;
+}
+
+.alunos-lista, .professores-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.aluno-card, .professores-card {
+  background: linear-gradient(135deg, #3B9A94, #A8D0E6);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  font-size: 1.4em;
+  max-width: 350px; /* Define uma largura máxima */
+  flex: 1 1 300px; /* Evita que cartões individuais ocupem toda a tela */
+  margin-bottom: 20px;
+}
+
+.aluno-card:hover, .professores-card:hover {
+  transform: translateY(-10px);
+}
+
+.aluno-card h2, .professores-card h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.aluno-card p, .professores-card p {
+  font-size: 1.4em;
+  color: #D3D3D3;
+}
