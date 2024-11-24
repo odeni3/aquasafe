@@ -1,0 +1,71 @@
+.artigos-container {
+    background-color: #F0F8FF;
+    padding: 20px;
+    color: #003366;
+  }
+  
+  .artigos-container h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #003366;
+  }
+  
+  .artigos-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+  }
+  
+  .artigo-card {
+    background: linear-gradient(135deg, #6AB7D6, #B3E5FC);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    color: #003366;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .artigo-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .artigo-card h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .artigo-autor {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #0077B6;
+  }
+  
+  .artigo-card p {
+    font-size: 1.1em;
+    color: #005073;
+  }
+
+  .artigo-botao {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #0077b6;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .artigo-botao:hover {
+    background-color: #005f87;
+    transform: scale(1.05);
+  }
+  
