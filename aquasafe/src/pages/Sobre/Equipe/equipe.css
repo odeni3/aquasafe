@@ -6,13 +6,13 @@
 
 h1 {
   color: #333;
-  font-size: 3em; /* Deixa o título "Equipe" maior */
+  font-size: 3em; 
   margin-bottom: 20px;
 }
 
 h2 {
   color: #555;
-  font-size: 2.5em; /* Deixa "Alunos" e "Professores" grandes, mas menores que "Equipe" */
+  font-size: 2.5em; 
   margin-top: 30px;
 }
 
@@ -33,8 +33,8 @@ h2 {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
   font-size: 1.4em;
-  max-width: 350px; /* Define uma largura máxima */
-  flex: 1 1 300px; /* Evita que cartões individuais ocupem toda a tela */
+  max-width: 350px; 
+  flex: 1 1 300px; 
   margin-bottom: 20px;
 }
 
