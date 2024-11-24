@@ -21,9 +21,8 @@ function Header() {
           <li className="dropdown">
             <a>Sobre</a>
             <div className="dropdown-content">
-              <a>Missão</a>
               <Link to="/equipe">Equipe</Link>
-              <a>História</a>
+              <Link to="/missao">Missao</Link>
             </div>
           </li>
           <li className="dropdown">

@@ -1,0 +1,65 @@
+/* Garantindo que o body e html ocupem toda a tela */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f9; /* Cor suave de fundo para não sobrecarregar */
+  }
+  
+  /* Container da Missão - Estilo centralizado com gradiente */
+  .missao-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;  /* 80% da altura da tela */
+    width: 90vw;   /* 90% da largura da tela */
+    background: linear-gradient(135deg, #3B9A94, #A8D0E6); /* Gradiente suave entre verde e azul */
+    border-radius: 20px;
+    color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3em; /* Tamanho do título */
+    color: #fff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .missao-texto {
+    font-size: 1.8em; /* Tamanho ajustado para o corpo do texto */
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #D3D3D3; /* Cor mais suave para o texto */
+    text-align: justify;
+  }
+  
+  .missao-texto p {
+    margin-bottom: 20px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .missao-container {
+      height: auto; /* Deixa o container ajustável para telas menores */
+      width: 95vw; /* Ajusta a largura em telas menores */
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 2.5em; /* Reduz o título em telas pequenas */
+    }
+  
+    .missao-texto {
+      font-size: 1.4em; /* Ajusta o texto para telas menores */
+    }
+  }
+  
