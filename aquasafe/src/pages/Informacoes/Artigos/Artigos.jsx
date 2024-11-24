@@ -48,5 +48,6 @@ const Artigos = () => {
     </div>
   );
 };
+/**/ 
 
 export default Artigos;
