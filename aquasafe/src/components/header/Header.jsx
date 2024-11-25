@@ -14,6 +14,7 @@ function Header() {
             <a>Serviços</a>
             <div className="dropdown-content">
               <Link to="/estatisticas">Estatísticas</Link>
+              <Link to="/simulacao">Simulação</Link>
               <Link to="/flappy">Jogar</Link>
               <Link to="/tabua">Previsão</Link>
             </div>
