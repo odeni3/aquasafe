@@ -16,6 +16,7 @@ function Header() {
               <Link to="/estatisticas">Estatísticas</Link>
               <Link to="/simulacao">Simulação</Link>
               <Link to="/tabua">Previsão</Link>
+              <Link to="/quiz">Quiz</Link>
             </div>
           </li>
           <li className="dropdown">
