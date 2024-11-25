@@ -1,93 +1,234 @@
-/* Contêiner para centralizar o card */
 .clima-container {
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  min-height: 100vh;
-  min-width: 190vh; /* Garante que ocupe toda a altura da tela */
-  background-color: #ecf0f1; /* Cor de fundo do contêiner */
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f4f4f4 0%, #e6f7ff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 40px 60px;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Estilo do card */
-.clima {
-  font-family: 'Arial', sans-serif;
-  background-color: #edc9f3; /* Cor de fundo suave */
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  max-width: 600px;
-  color: #333;
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
+.clima-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.clima::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 30px;
-  background: linear-gradient(90deg, #8e44ad, #3498db);
+.clima-header {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-/* Título principal */
-.clima h1 {
-  font-size: 3rem;
-  color: #000000; /* Cor para o título */
+.clima-header h1 {
+    font-size: 3rem;
+    color: #003366;
+    margin-bottom: 15px;
+    position: relative;
 }
 
-/* Tamanho da temperatura */
-.clima h2 {
-  margin-top: -10px;
-  font-size: 2rem;
-  color: #000000; /* Cor da temperatura */
-  margin-bottom: 30px;
+.clima-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #3B9A94, #A8D0E6);
+    border-radius: 2px;
 }
 
-/* Descrição do clima */
-.clima .weather-description {
-  font-size: 1.2rem;
-  margin: 10px 0;
+.clima-location {
+    font-size: 1.2em;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
-/* Informações adicionais de clima */
-.clima .clima-info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 20px;
+.temperatura-principal {
+    background: linear-gradient(135deg, #3B9A94, #A8D0E6);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    color: white;
 }
 
-.clima .clima-info p {
-  margin: 10px;
-  width: 150px;
+.temp-atual {
+    display: flex;
+    align-items: flex-start;
 }
 
-.clima .clima-info p span {
-  font-weight: bold;
+.temp-numero {
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 1;
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
-  .clima {
+.temp-unidade {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.temp-descricao {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.temp-descricao img {
+    width: 80px;
+    height: 80px;
+    filter: brightness(0) invert(1);
+}
+
+.clima-detalhes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.detalhe-item {
+    background: white;
+    border-radius: 15px;
     padding: 20px;
-    margin: 20px; /* Menor margem para telas pequenas */
-  }
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
 
-  .clima h1 {
-    font-size: 1.5rem;
-  }
+.detalhe-item:hover {
+    transform: translateY(-5px);
+}
 
-  .clima h2 {
-    font-size: 2rem;
-  }
+.detalhe-icon {
+    font-size: 1.5em;
+}
 
-  .clima .clima-info {
+.detalhe-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.detalhe-label {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.detalhe-valor {
+    font-size: 1.2em;
+    color: #003366;
+    font-weight: 500;
+}
+
+.sol-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.sol-item {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.sol-item:hover {
+    transform: translateY(-5px);
+}
+
+.sol-icon {
+    font-size: 1.5em;
+}
+
+.sol-dados {
+    display: flex;
+    flex-direction: column;
+}
+
+.sol-label {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.sol-hora {
+    font-size: 1.2em;
+    color: #003366;
+    font-weight: 500;
+}
+
+.loading-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f4f4f4 0%, #e6f7ff 100%);
+    display: flex;
     flex-direction: column;
     align-items: center;
-  }
+    justify-content: center;
+    color: #003366;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3B9A94;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+.error-container {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    color: #003366;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .clima-container {
+        padding: 100px 20px 40px;
+    }
+
+    .clima-card {
+        padding: 20px;
+    }
+
+    .clima-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .temperatura-principal {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .clima-detalhes {
+        grid-template-columns: 1fr;
+    }
+
+    .sol-info {
+        grid-template-columns: 1fr;
+    }
 }
