@@ -1,60 +1,117 @@
-body, html {
+body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  background: #f4f4f9;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f4f4f4 0%, #e6f7ff 100%);
 }
-
+  
 .missao-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
-  width: 90vw; 
-  background: linear-gradient(135deg, #3B9A94, #A8D0E6);
-  border-radius: 20px;
-  color: #fff;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  padding: 40px;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #f4f4f4 0%, #e6f7ff 100%);
+}
+
+.missao-content {
+  max-width: 900px;
+  width: 100%;
+  margin: 80px auto;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.missao-content h1 {
   text-align: center;
-  margin: 5vh auto;
-}
-
-h1 {
-  font-size: 3em;
-  color: #fff;
+  font-size: 2.8rem;
+  color: #003366;
   margin-bottom: 30px;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.missao-texto {
-  font-size: 1.8em; 
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
-  color: #D3D3D3;
+.missao-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.missao-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #ff66b2, #3498db);
+}
+
+.missao-card p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 25px;
   text-align: justify;
 }
 
-.missao-texto p {
-  margin-bottom: 20px;
+.missao-destaque {
+  background: linear-gradient(135deg, #f0f8ff 0%, #e6f7ff 100%);
+  padding: 25px;
+  border-radius: 15px;
+  border-left: 5px solid #ff66b2;
+  font-weight: 500;
+  color: #003366 !important;
+  margin-top: 30px !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
-  .missao-container {
-    height: auto;
-    width: 95vw;
-    padding: 20px;
-    margin: 5vh auto;
+  .missao-content {
+    margin: 60px auto;
   }
 
-  h1 {
-    font-size: 2.5em; 
+  .missao-content h1 {
+    font-size: 2.2rem;
   }
 
-  .missao-texto {
-    font-size: 1.4em;
+  .missao-card {
+    padding: 30px;
+  }
+
+  .missao-card p {
+    font-size: 1rem;
+    line-height: 1.6;
   }
 }
+
+@media (max-width: 480px) {
+  .missao-content {
+    margin: 40px auto;
+  }
+
+  .missao-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .missao-card {
+    padding: 20px;
+  }
+
+  .missao-destaque {
+    padding: 20px;
+  }
+}
+  
