@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 function App() {
   return (
     <>
-    <Header />
+      <Header />
       <div className="app-container">
         <div className="image-container-water">
           <img src={waterbg} alt="Water background" />

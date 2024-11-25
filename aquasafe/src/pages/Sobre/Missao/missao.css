@@ -1,99 +1,117 @@
-/* Garantindo que o body e html ocupem toda a tela */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f4f4f9; /* Cor suave de fundo para não sobrecarregar */
-  }
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f4f4f4 0%, #e6f7ff 100%);
+}
   
-  /* Container da Missão - Estilo centralizado com gradiente */
-  .missao-container {
-    background-color: #f0f8ff;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
-    box-sizing: border-box;
+.missao-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #f4f4f4 0%, #e6f7ff 100%);
+}
+
+.missao-content {
+  max-width: 900px;
+  width: 100%;
+  margin: 80px auto;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.missao-content h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #003366;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.missao-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.missao-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #ff66b2, #3498db);
+}
+
+.missao-card p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.missao-destaque {
+  background: linear-gradient(135deg, #f0f8ff 0%, #e6f7ff 100%);
+  padding: 25px;
+  border-radius: 15px;
+  border-left: 5px solid #ff66b2;
+  font-weight: 500;
+  color: #003366 !important;
+  margin-top: 30px !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
   .missao-content {
-    max-width: 800px;
-    width: 100%;
+    margin: 60px auto;
   }
-  
+
   .missao-content h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #003366;
-    margin-bottom: 30px;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(100deg, #1B18F9 0%, #480dec 46.35%, #E146AD 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-size: 2.2rem;
   }
-  
+
   .missao-card {
-    background-color: #ffffff;
-    border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 0.3s ease;
   }
-  
+
   .missao-card p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.6;
-    color: #333;
-    margin-bottom: 20px;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .missao-content {
+    margin: 40px auto;
+  }
+
+  .missao-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .missao-card {
+    padding: 20px;
+  }
+
   .missao-destaque {
-    font-weight: 600;
-    color: #003366 !important;
-    padding: 15px;
-    border-left: 4px solid #ff66b2;
-    background-color: #f8f9fa;
-    border-radius: 0 10px 10px 0;
+    padding: 20px;
   }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .missao-content h1 {
-      font-size: 2rem;
-    }
-  
-    .missao-card {
-      padding: 20px;
-    }
-  
-    .missao-card p {
-      font-size: 1rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .missao-content h1 {
-      font-size: 1.8rem;
-    }
-  
-    .missao-card {
-      padding: 15px;
-    }
-  }
+}
   
