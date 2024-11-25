@@ -1,6 +1,4 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Equipe.css';
+import './styles.css';
 
 const Equipe = () => {
 

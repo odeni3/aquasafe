@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./styles.css"; // Importe o arquivo CSS atualizado
+import "./styles.css";
 import checker from  '../../assets/check.svg';
 import eye from '../../assets/eye.svg';
 function Vamosla() {

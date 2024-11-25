@@ -1,5 +1,4 @@
-import React from 'react';
-import './Missao.css';
+import './styles.css';
 
 const Missao = () => {
   return (

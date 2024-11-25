@@ -1,0 +1,60 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #f4f4f9;
+}
+
+.missao-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 90vw; 
+  background: linear-gradient(135deg, #3B9A94, #A8D0E6);
+  border-radius: 20px;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: center;
+  margin: 5vh auto;
+}
+
+h1 {
+  font-size: 3em;
+  color: #fff;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.missao-texto {
+  font-size: 1.8em; 
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #D3D3D3;
+  text-align: justify;
+}
+
+.missao-texto p {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .missao-container {
+    height: auto;
+    width: 95vw;
+    padding: 20px;
+    margin: 5vh auto;
+  }
+
+  h1 {
+    font-size: 2.5em; 
+  }
+
+  .missao-texto {
+    font-size: 1.4em;
+  }
+}

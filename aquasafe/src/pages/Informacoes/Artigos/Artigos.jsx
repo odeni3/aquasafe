@@ -1,5 +1,4 @@
-import React from 'react';
-import './artigos.css';
+import './styles.css';
 
 const Artigos = () => {
   const dadosArtigos = [
