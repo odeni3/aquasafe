@@ -15,7 +15,6 @@ function Header() {
             <div className="dropdown-content">
               <Link to="/estatisticas">Estatísticas</Link>
               <Link to="/simulacao">Simulação</Link>
-              <Link to="/flappy">Jogar</Link>
               <Link to="/tabua">Previsão</Link>
             </div>
           </li>
@@ -34,6 +33,9 @@ function Header() {
           </li>
         </ul>
       </nav>
+      <Link to="/flappy" className="play-button">
+        Jogar !
+      </Link>
     </header>
   );
 }
