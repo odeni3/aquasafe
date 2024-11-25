@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import './styles.css';
-=======
 import { Bar, Doughnut } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -13,7 +10,6 @@ import {
   Legend,
   ArcElement,
 } from 'chart.js';
-
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -23,11 +19,13 @@ ChartJS.register(
   Legend,
   ArcElement,
 );
->>>>>>> 7c16c0173e21bc6c14e48f16a57e92acb8cc201b
 
 const Estatisticas = () => {
   const dadosEstatisticas = [
     {
+      titulo: "Taxa de Poluição Marinha",
+      valor: "80%",
+      descricao: "Porcentagem de mares e oceanos com altos níveis de poluição.",
       titulo: "Poluição Marinha por Plástico",
       valor: "8 milhões de toneladas",
       descricao: "Quantidade de plástico que entra nos oceanos a cada ano.",
@@ -36,6 +34,9 @@ const Estatisticas = () => {
       corBorda: 'rgba(54, 162, 235, 1)',
     },
     {
+      titulo: "Morte de Animais Marinhos",
+      valor: "1.000.000+",
+      descricao: "Número estimado de animais marinhos mortos por poluição.",
       titulo: "Áreas Marinhas Protegidas",
       valor: "7,66%",
       descricao: "Percentual de oceanos protegidos por áreas marinhas protegidas.",
@@ -45,6 +46,9 @@ const Estatisticas = () => {
       corBorda: ['rgba(75, 192, 192, 1)', 'rgba(192, 192, 192, 1)'],
     },
     {
+      titulo: "Plástico nos Oceanos",
+      valor: "8 milhões de toneladas",
+      descricao: "Quantidade de plástico jogada nos oceanos anualmente.",
       titulo: "Acidificação dos Oceanos",
       valor: "26% de aumento",
       descricao: "Aumento na acidificação dos oceanos desde a revolução industrial.",
@@ -53,6 +57,9 @@ const Estatisticas = () => {
       corBorda: 'rgba(255, 206, 86, 1)',
     },
     {
+      titulo: "Áreas Marinhas Protegidas",
+      valor: "7.5%",
+      descricao: "Percentual de oceanos protegidos por áreas marinhas protegidas.",
       titulo: "Sobrepesca Global",
       valor: "34,2%",
       descricao: "Porcentagem de estoques pesqueiros explorados além do biologicamente sustentável.",
@@ -63,19 +70,6 @@ const Estatisticas = () => {
     },
   ];
 
-<<<<<<< HEAD
-  const barChartData = [
-    { name: 'Poluição', percent: 80 },
-    { name: 'Áreas Protegidas', percent: 7.5 },
-  ];
-
-  const pieChartData = [
-    { name: 'Animais Marinhos', value: 1000000 },
-    { name: 'Outros Impactos', value: 500000 },
-  ];
-
-  const COLORS = ['#3B9A94', '#FFE156'];
-=======
   const renderGrafico = (dados, index) => {
     const options = {
       responsive: true,
@@ -90,7 +84,6 @@ const Estatisticas = () => {
         }
       }
     };
-
     // Usar Doughnut para dados com duas partes (comparações)
     if (dados.legendas) {
       return (
@@ -108,7 +101,6 @@ const Estatisticas = () => {
         />
       );
     }
-
     // Usar Bar para dados únicos
     return (
       <Bar
@@ -126,16 +118,10 @@ const Estatisticas = () => {
       />
     );
   };
->>>>>>> 7c16c0173e21bc6c14e48f16a57e92acb8cc201b
-
   return (
     <div className="estatisticas-container">
       <h1>Estatísticas da ODS 14: Vida na Água</h1>
-<<<<<<< HEAD
-
-=======
       
->>>>>>> 7c16c0173e21bc6c14e48f16a57e92acb8cc201b
       <div className="estatisticas-cards">
         {dadosEstatisticas.map((item, index) => (
           <div className="estatistica-card" key={index}>
@@ -147,42 +133,6 @@ const Estatisticas = () => {
             </div>
           </div>
         ))}
-      </div>
-
-      <div className="graficos-container">
-        <div className="grafico">
-          <h2>Progresso de Poluição e Proteção</h2>
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={barChartData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Bar dataKey="percent" fill="#3B9A94" />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-
-        <div className="grafico">
-          <h2>Impactos nos Animais</h2>
-          <ResponsiveContainer width="100%" height={300}>
-            <PieChart>
-              <Pie
-                data={pieChartData}
-                cx="50%"
-                cy="50%"
-                labelLine={false}
-                outerRadius={100}
-                fill="#8884d8"
-                dataKey="value"
-              >
-                {pieChartData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                ))}
-              </Pie>
-            </PieChart>
-          </ResponsiveContainer>
-        </div>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import './missao.css';
+import './styles.css';
 
 const Missao = () => {
   return (
