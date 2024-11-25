@@ -24,7 +24,32 @@ body {
   justify-content: flex-end; /* Alinha as imagens à direita dentro do contêiner */
   align-items: center;
 }
+.image-container-animals img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantém o aspecto da imagem */
+  transition: transform 0.5s ease-in-out; /* Define a animação */
+}
+/* Imagem */
+.image-container-animals img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem se ajuste ao container */
+  animation: zoomAnimation 3s infinite ease-in-out; /* Define a animação */
+}
 
+/* Animação contínua */
+@keyframes zoomAnimation {
+  0% {
+    transform: scale(1); /* Estado inicial */
+  }
+  50% {
+    transform: scale(0.80); /* Zoom no meio */
+  }
+  100% {
+    transform: scale(1); /* Volta ao estado inicial */
+  }
+}
 .image-container-water img,
 .image-container-animals img {
   height: 100%;         /* Garante que as imagens ocupem toda a altura */
@@ -41,6 +66,19 @@ body {
 .image-container-crab img {
   height: 13rem;     /* Ajusta o tamanho da imagem do caranguejo */
   width: auto;
+  animation: crabAnimation 3s infinite ease-in-out; /* Define a animação */
+}
+
+@keyframes crabAnimation {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1) rotate(-10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
 }
 
 .text-card {
@@ -88,6 +126,8 @@ body {
   transition: color 0.3s;
   cursor: pointer;
 }
+
+
 
 /* Botão "Watch Video" */
 .watch-video-button {
