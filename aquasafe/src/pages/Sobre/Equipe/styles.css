@@ -1,53 +1,139 @@
 .equipe-container {
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f4f4f4 0%, #e6f7ff 100%);
+  padding: 120px 40px 60px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.equipe-container h1 {
+  font-size: 3.5rem;
+  color: #003366;
   text-align: center;
+  margin-bottom: 50px;
+  position: relative;
 }
 
-h1 {
-  color: #333;
-  font-size: 3em; 
-  margin-bottom: 20px;
+.equipe-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff66b2, #3498db);
+  border-radius: 2px;
 }
 
-h2 {
-  color: #555;
-  font-size: 2.5em; 
-  margin-top: 30px;
+.equipe-container h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  text-align: center;
+  margin: 50px 0 30px;
 }
 
 .alunos-lista, .professores-lista {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 20px;
 }
 
 .aluno-card, .professores-card {
-  background: linear-gradient(135deg, #3B9A94, #A8D0E6);
-  border-radius: 15px;
-  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.aluno-card::before, .professores-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(90deg, #3B9A94, #A8D0E6);
+}
+
+.aluno-card h2, .professores-card h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin: 20px 0;
+  padding: 0 20px;
   text-align: center;
-  color: #fff;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
-  font-size: 1.4em;
-  max-width: 350px; 
-  flex: 1 1 300px; 
-  margin-bottom: 20px;
+}
+
+.aluno-card p, .professores-card p {
+  color: #666;
+  padding: 0 20px;
+  margin: 10px 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
 }
 
 .aluno-card:hover, .professores-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
-.aluno-card h2, .professores-card h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
+.card-content {
+  padding: 25px;
+  position: relative;
+  z-index: 1;
 }
 
-.aluno-card p, .professores-card p {
-  font-size: 1.4em;
-  color: #D3D3D3;
+.card-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(135deg, #3B9A94, #A8D0E6);
+  opacity: 0.1;
+  z-index: -1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .equipe-container {
+    padding: 100px 20px 40px;
+  }
+
+  .equipe-container h1 {
+    font-size: 2.8rem;
+  }
+
+  .equipe-container h2 {
+    font-size: 2rem;
+  }
+
+  .alunos-lista, .professores-lista {
+    gap: 20px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .equipe-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .equipe-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .aluno-card h2, .professores-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .aluno-card p, .professores-card p {
+    font-size: 1rem;
+  }
 }
