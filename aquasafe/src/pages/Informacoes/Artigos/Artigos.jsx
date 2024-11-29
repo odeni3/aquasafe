@@ -1,5 +1,5 @@
 import './styles.css';
-
+import { Link } from 'react-router-dom'; 
 const Artigos = () => {
   const dadosArtigos = [
     {
@@ -27,6 +27,13 @@ const Artigos = () => {
   return (
     <div className="artigos-container">
       <h1>Artigos Inspiradores sobre a ODS 14</h1>
+      <div className="centraliza">
+        <div className="botao">
+          <Link to="/">
+            <button>Início</button>
+          </Link>
+        </div>
+      </div>
       <div className="artigos-lista">
         {dadosArtigos.map((artigo, index) => (
           <div className="artigo-card" key={index}>

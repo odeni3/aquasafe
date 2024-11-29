@@ -45,7 +45,7 @@
   background: white;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: radial-gradient(255.8% 457.4% at 88.45% 24.64%, #C27FCF 0%, #0368FF 100%);
   transition: all 0.3s ease;
   position: relative;
 }
@@ -57,7 +57,7 @@
   left: 0;
   right: 0;
   height: 8px;
-  background: linear-gradient(90deg, #3B9A94, #A8D0E6);
+  background: radial-gradient(255.8% 457.4% at 88.45% 24.64%, #C27FCF 0%, #0368FF 100%);
 }
 
 .aluno-card h2, .professores-card h2 {
@@ -69,7 +69,7 @@
 }
 
 .aluno-card p, .professores-card p {
-  color: #666;
+  color: radial-gradient(255.8% 457.4% at 88.45% 24.64%, #C27FCF 0%, #0368FF 100%);
   padding: 0 20px;
   margin: 10px 0;
   font-size: 1.1rem;
@@ -79,7 +79,7 @@
 
 .aluno-card:hover, .professores-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: radial-gradient(255.8% 457.4% at 88.45% 24.64%, #C27FCF 0%, #0368FF 100%);
 }
 
 .card-content {
@@ -95,7 +95,7 @@
   left: 0;
   right: 0;
   height: 100px;
-  background: linear-gradient(135deg, #3B9A94, #A8D0E6);
+  background: radial-gradient(255.8% 457.4% at 88.45% 24.64%, #C27FCF 0%, #0368FF 100%);
   opacity: 0.1;
   z-index: -1;
 }
@@ -136,4 +136,44 @@
   .aluno-card p, .professores-card p {
     font-size: 1rem;
   }
+}
+
+.centraliza{
+  display: flex;
+  justify-content: center;
+  
+  align-items: center;
+}
+.botao {
+  display: flex;
+  justify-content: center;
+  
+  align-items: center;
+  
+  padding: 5px 10px;
+  gap: 10px;
+  width: 202px;
+  height: 69px;
+  background: radial-gradient(255.8% 457.4% at 88.45% 24.64%, #C27FCF 0%, #0368FF 100%);
+  border-radius: 18px;
+  z-index: 4;
+}
+
+.botao button {
+  display: flex;
+  justify-content: center;
+  
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background: radial-gradient(255.8% 457.4% at 88.45% 24.64%, #ff88cc 0%, #2f2b6d 100%); /* Inverte as cores do gradiente */
+  transition: color 0.3s;
+  cursor: pointer;
 }

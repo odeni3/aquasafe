@@ -99,6 +99,8 @@ body {
   top: 600px; /* Ajuste a posição do botão conforme necessário */
   left: 12.5rem; /* Alinha com o card */
   display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; 
   flex-direction: row;
   justify-content: center;
   align-items: center;

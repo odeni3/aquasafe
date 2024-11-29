@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 const perguntasQuiz = [
@@ -99,6 +100,14 @@ const QuizEducativo = () => {
     return (
       <div className="quiz-container">
         <h1>Quiz Educativo: ODS 14</h1>
+
+        <div className="centraliza">
+        <div className="botao">
+          <Link to="/">
+            <button>Início</button>
+          </Link>
+        </div>
+      </div>
         {mostrarResultado ? (
           <div className="quiz-score">
             <h2>Você concluiu o quiz!</h2>
@@ -123,7 +132,12 @@ const QuizEducativo = () => {
             {feedback && <div className="quiz-feedback">{feedback}</div>}
           </div>
         )}
+ 
+
+        
       </div>
+
+      
     );
 };
   

@@ -1,5 +1,5 @@
 import './styles.css';
-
+import { Link } from 'react-router-dom'; 
 const Equipe = () => {
 
   const alunos = [
@@ -17,6 +17,13 @@ const Equipe = () => {
 
   return (
     <div className="equipe-container">
+      <div className="centraliza">
+        <div className="botao">
+          <Link to="/">
+            <button>Início</button>
+          </Link>
+        </div>
+      </div>
       <h1>Equipe</h1>
 
       <h2>Alunos</h2>

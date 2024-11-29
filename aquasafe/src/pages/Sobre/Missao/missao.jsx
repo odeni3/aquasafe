@@ -1,5 +1,5 @@
 import './styles.css';
-
+import { Link } from 'react-router-dom'; 
 const Missao = () => {
   return (
     <div className="missao-container">
@@ -27,8 +27,19 @@ const Missao = () => {
             Junte-se a nós nessa jornada para preservar os oceanos e garantir um planeta saudável para as futuras gerações. 
             Unidos pela ODS 14, podemos fazer a diferença!
           </p>
+
+          <div className="centraliza">
+        <div className="botao">
+          <Link to="/">
+            <button>Início</button>
+          </Link>
         </div>
       </div>
+        </div>
+        
+      </div>
+
+      
     </div>
   );
 };

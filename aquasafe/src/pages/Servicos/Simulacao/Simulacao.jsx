@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import './styles.css';
+import { Link } from "react-router-dom";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -160,6 +161,14 @@ const Simulacao = () => {
             <Line data={dadosGrafico} options={opcoesGrafico} />
           </div>
         </div>
+
+        <div className="centraliza">
+        <div className="botao">
+          <Link to="/">
+            <button>Início</button>
+          </Link>
+        </div>
+      </div>
       </div>
     </div>
   );
