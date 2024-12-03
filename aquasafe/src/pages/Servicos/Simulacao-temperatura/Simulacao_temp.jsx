@@ -45,7 +45,11 @@ const SimulacaoTemperatura = () => {
     { ano: 2016, temperatura: 16.5 },
     { ano: 2017, temperatura: 16.7 },
     { ano: 2018, temperatura: 16.9 },
-    { ano: 2019, temperatura: 17.0 }
+    { ano: 2019, temperatura: 17.0 },
+    { ano: 2020, temperatura: 17.1 },
+    { ano: 2021, temperatura: 17.3 },
+    { ano: 2022, temperatura: 17.5 },
+    { ano: 2023, temperatura: 17.6 }
   ]);
   const [dadosFuturos, setDadosFuturos] = useState([]);
   const [fundoCor, setFundoCor] = useState('#33C1FF'); // Cor inicial de fundo
@@ -185,20 +189,74 @@ const SimulacaoTemperatura = () => {
 
       <div className="simulacao-content centraliza">
         {/* Seção de controle para a quantidade de anos */}
-        <div className="controle-container centraliza">
-          <div className="controle-item">
-            <label className="label-anos">Quantos anos à frente?</label>
-            <input
-              type="number"
-              min="1"
-              max="50"
-              value={anosFuturo}
-              onChange={(e) => setAnosFuturo(Number(e.target.value))}
-              className="controle-slider"
-            />
-            <span className="valor-slider">{anosFuturo} anos</span>
-          </div>
+        {/* Controle para a quantidade de anos de simulação */}
+        <div
+          className="controle-container centraliza"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '20px',
+            textAlign: 'center',
+            backgroundColor: '#f5f5f5',
+            borderRadius: '10px',
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+          }}
+        >
+          {/* Texto à esquerda */}
+          <label
+            htmlFor="anos-futuros"
+            className="label-anos"
+            style={{
+              fontSize: '1.5rem',
+              fontWeight: 'bold',
+              color: '#1E4C6B',
+              flex: '2', // Mais espaço para o texto
+              textAlign: 'left',
+            }}
+          >
+            Quantos anos à frente?
+          </label>
+
+          {/* Campo de entrada no meio */}
+          <input
+            id="anos-futuros"
+            type="number"
+            min="1"
+            max="50"
+            step="1" // Permite números decimais
+            value={anosFuturo}
+            onChange={(e) => setAnosFuturo(Number(e.target.value))}
+            className="controle-slider"
+            style={{
+              padding: '8px',
+              fontSize: '1.2rem',
+              width: '80px', // Campo menor
+              textAlign: 'center',
+              border: '2px solid #1E4C6B',
+              borderRadius: '8px',
+              flex: '0.1', // Menos espaço para o campo
+            }}
+          />
+
+          {/* Texto à direita */}
+          <span
+            className="valor-slider"
+            style={{
+              fontSize: '1.5rem',
+              color: '#1E4C6B',
+              fontWeight: 'bold',
+              flex: '2', // Mais espaço para o texto
+              textAlign: 'right',
+            }}
+          >
+            Simulando para o ano de {2023 + anosFuturo}
+          </span>
         </div>
+
+
+
+
 
         {/* Seção do gráfico */}
         <div className="grafico-container centraliza">
