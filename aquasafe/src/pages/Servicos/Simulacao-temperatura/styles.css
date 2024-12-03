@@ -1,0 +1,95 @@
+/* CSS para centralizar e preencher a tela */
+.simulacao-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 10px;
+}
+
+.centraliza {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.header-container {
+  margin-top: 40px; /* Aumenta o distanciamento do título */
+  width: 100%; /* Garante que a largura do título ocupe toda a tela */
+}
+
+.titulo-simulacao {
+  margin-bottom: 20px; /* Distância entre o título e a seção de controle */
+  width: 100%;
+  text-align: center; /* Centraliza o título */
+}
+
+.simulacao-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.controle-container{
+  margin: 100px 0;
+}
+.grafico-container,
+.impacto-container {
+  width: 100%;
+}
+
+.controle-item {
+  width: 100%; /* Garante que o input de anos ocupe toda a largura */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controle-slider {
+  width: 100%; /* Garante que o slider ocupe toda a largura disponível */
+}
+
+.footer-container {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.botao-inicio {
+  width: 100%;
+  padding: 10px;
+  background-color: #33C1FF;
+  border: none;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.botao-inicio:hover {
+  background-color: #005f87;
+}
+
+.alerta-temperatura {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 10px;
+  width: 100%; /* Garante que a área do alerta ocupe toda a largura */
+}
+
+.grafico-container {
+  width: 100%; /* Garante que o gráfico ocupe toda a largura da tela */
+  max-width: 100%;
+  height: 400px;
+  padding: 0 10px; /* Ajuste para o gráfico ocupar toda a largura com algum padding */
+}
+
+.valor-slider {
+  font-size: 16px;
+  text-align: center;
+}

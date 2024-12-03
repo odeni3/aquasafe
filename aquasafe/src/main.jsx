@@ -8,6 +8,7 @@ import TabuaDeMare from './pages/Servicos/Previsao/Clima.jsx';
 import Flappy from './pages/Servicos/Game/flappy.jsx';
 import Estatisticas from './pages/Servicos/Estatisticas/Estatisticas.jsx';
 import Simulacao from './pages/Servicos/Simulacao/Simulacao.jsx';
+import Simulacao_temp from './pages/Servicos/Simulacao-temperatura/Simulacao_temp.jsx';
 import Equipe from './pages/Sobre/Equipe/equipe.jsx';
 import Artigos from './pages/Informacoes/Artigos/Artigos.jsx'
 import Missao from './pages/Sobre/Missao/missao.jsx';
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')).render(
     <Router>
       <Routes>
         <Route path="/" element={<App />} /> 
+        <Route path="/previsao-temperatura" element={<Simulacao_temp/>} /> 
         <Route path="/vamosla" element={<Vamosla />} />
         <Route path="/tabua" element={<TabuaDeMare />} />
         <Route path="/flappy" element={<Flappy />} />
