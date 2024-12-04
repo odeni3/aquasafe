@@ -13,6 +13,7 @@ import Equipe from './pages/Sobre/Equipe/equipe.jsx';
 import Artigos from './pages/Informacoes/Artigos/Artigos.jsx'
 import Missao from './pages/Sobre/Missao/missao.jsx';
 import QuizEducativo from './pages/Quiz/Quiz.jsx';
+import Fontes from './pages/Fontes/Fontes.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -29,6 +30,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/artigos' element={<Artigos />} />
         <Route path="/missao" element={<Missao />} />
         <Route path="/quiz" element={<QuizEducativo />} />
+        <Route path="/fontes" element={<Fontes />} />
       </Routes>
     </Router>
   </StrictMode>

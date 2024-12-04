@@ -31,6 +31,7 @@ function Header() {
             <a>Informações</a>
             <div className="dropdown-content">
               <Link to="/artigos">Artigos</Link>
+              <Link to="/fontes">Fontes</Link>
             </div>
           </li>
         </ul>
